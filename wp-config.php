@@ -69,6 +69,11 @@ define( 'WP_DEBUG_DISPLAY', false );
 if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) )
 	$memcached_servers = include( dirname( __FILE__ ) . '/memcached.php' );
 
+define('WP_SITEURL','http://' . $_SERVER['SERVER_NAME'] . '/wp');
+define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME']);
+
+define('FS_METHOD', 'direct');
+
 // ===========================================================================================
 // This can be used to programatically set the stage when deploying (e.g. production, staging)
 // ===========================================================================================
